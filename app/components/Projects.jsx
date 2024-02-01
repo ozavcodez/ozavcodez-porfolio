@@ -114,7 +114,7 @@ const Projects = () => {
                         />
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
-                                <h4 className="text-lg text-orange-400">featured project</h4>
+                                <h4 className="text-lg text-orange-400">personal project</h4>
                                 <h2 className="title text-2xl py-5">Hackathon Project</h2>
                                 <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
@@ -149,7 +149,7 @@ const Projects = () => {
                     <div className="relative flex flex-col-reverse md:flex-row gap-10 justify-center items-center" >
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
-                                <h4 className="text-lg text-orange-500">featured project</h4>
+                                <h4 className="text-lg text-orange-500">personal project</h4>
                                 <h2 className="title text-2xl py-5">Portfolio Website</h2>
                                 <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
