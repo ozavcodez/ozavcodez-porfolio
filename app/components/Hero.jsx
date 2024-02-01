@@ -24,7 +24,7 @@ const hero = () => {
                 
                     A software developer functioning in the industry for 2years+. I am passionate about learning new technologies and solving problems. I have a Good knowledge of software design, architecture, and principles, writing efficient and optimized programs in Languages such as  Javascript, Vue Js, React, and CSS.
                     </p>
-                    <Link href='' className="btn py-3"> Download Resume</Link>
+                    <Link href='/ozav-cv.pdf' className="btn py-3"> Download Resume</Link>
                 </div>
             </div>
             <div>

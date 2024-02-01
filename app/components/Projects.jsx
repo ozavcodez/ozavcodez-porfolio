@@ -167,7 +167,7 @@ const Projects = () => {
 
                                     </div>
                                     <div className="pt-5 flex gap-5 cursor-pointer items-center">
-                                        <Link href="https://vercel.com/ozavcodez">
+                                        <Link href="https://ozavcodez-porfolio.vercel.app/">
                                             <ArrowTopRightOnSquareIcon className="h-6 w-6 text-[#CCD6F6]"/>
                                         </Link>
                                         <SocialIcon
