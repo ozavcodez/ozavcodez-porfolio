@@ -6,7 +6,7 @@ const Skills = () => {
     
     return ( 
         <>
-        <section className="min-h-screen relative flex  flex-col text-center md:text-left justify-center w-[90%] mx-auto mt-10">
+        <section className="min-h-screen relative flex  flex-col text-center md:text-left justify-center w-[90%] lg:w-[80%] mx-auto mt-10">
             <motion.div
                 initial={{opacity:0}}
                 whileInView={{opacity:1}}
@@ -66,6 +66,20 @@ const Skills = () => {
                 >
                     <Image
                     src="/img/javascript.png"
+                    width={100}
+                    height={100}
+                    alt=""
+                    className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
+                    />
+                </motion.div>
+                <motion.div
+                    className="group relative cursor-pointer"
+                    initial={{x:-100, opacity:0}}
+                    transition={{duration:1}}
+                    whileInView={{opacity:1, x:0}}
+                >
+                    <Image
+                    src="/img/typescript.jpg"
                     width={100}
                     height={100}
                     alt=""

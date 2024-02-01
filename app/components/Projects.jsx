@@ -33,21 +33,21 @@ const Projects = () => {
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
                                 <h4 className="text-lg text-orange-400">featured project</h4>
                                 <h2 className="title text-2xl py-5">E-Learning Portal</h2>
-                                <div className="w-full  right-10 text-[#CCD6F6]  rounded-2xl ">
+                                <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
-                                        This is an e-learning platform. Users have a several option of courses they can explore. Once a user logs in, he gets access to the course he registered for. The user learning phase is tracked and once he is done with a course, he gets a certificate.
+                                        This is an e-learning platform. Users have several options of courses they can explore. Once a user logs in, he gets access to the course he registered for. The user learning phase is tracked and once he is done with a course, he gets a certificate.
                                     </p>
                                     <p>
-                                        The key functionalities are to autheticate user, see list list of courses registered for, and issue certificate with a unique id to user
+                                        The key functionalities are to autheticate user, see list  of courses registered for, and issue certificate with a unique id to user
                                     </p>
-                                    <div className="pt-5 flex gap-3 cursor-progress">
+                                    <div className=" flex gap-3 cursor-progress">
                                         <button className="skill-btn">tailwind css</button>
                                         <button className="skill-btn">laravel</button>
                                         <button className="skill-btn">javascript</button>
 
 
                                     </div>
-                                    <div className="pt-5 flex gap-5 cursor-pointer items-center">
+                                    <div className=" flex gap-5 cursor-pointer items-center">
                                         <Link href="https://goalprimeedu.org/">
                                             <ArrowTopRightOnSquareIcon className="h-6 w-6 text-[#CCD6F6]"/>
                                         </Link>
@@ -67,21 +67,21 @@ const Projects = () => {
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
                                 <h4 className="text-lg text-orange-400">featured project</h4>
                                 <h2 className="title text-2xl py-5">Organization's website</h2>
-                                <div className="w-full  right-10 text-[#CCD6F6]  rounded-2xl ">
+                                <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
                                         This is an Organization website. It gives the Organizationan online presence. Presenting all what the oganization can do. This project enables a user friendly experinece for those interested in the Organization
                                     </p>
                                     <p>
                                         Users can easily get to know the current state of the organization, Users can comment on the blogpost and register for the organization newsletter
                                     </p>
-                                    <div className="pt-5 flex gap-3 cursor-progress">
+                                    <div className=" flex gap-3 cursor-progress">
                                         <button className="skill-btn">tailwind css</button>
                                         <button className="skill-btn">laravel</button>
                                         <button className="skill-btn">javascript</button>
 
 
                                     </div>
-                                    <div className="pt-5 flex gap-5 cursor-pointer items-center">
+                                    <div className=" flex gap-5 cursor-pointer items-center">
                                         <Link href="https://goalprime.org/">
                                             <ArrowTopRightOnSquareIcon className="h-6 w-6 text-[#CCD6F6]"/>
                                         </Link>
@@ -116,14 +116,14 @@ const Projects = () => {
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
                                 <h4 className="text-lg text-orange-400">featured project</h4>
                                 <h2 className="title text-2xl py-5">Hackathon Project</h2>
-                                <div className="w-full  right-10 text-[#CCD6F6]  rounded-2xl ">
+                                <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
-                                        An hackathon project designed for users to who want to peartake in the next hackathon. It a user friendly website ofr registering users interested in the next hackathond and passing information about the challenge
+                                        An hackathon project designed for users who want to peartake in the next hackathon. It a user friendly website for registering users interested in the next hackathond and passing information about the challenge
                                     </p>
                                     <p>
                                         The key functionalities are to register users, and to give more information about the challenge 
                                     </p>
-                                    <div className="pt-5 flex gap-3 cursor-progress">
+                                    <div className=" flex gap-3 cursor-progress">
                                         <button className="skill-btn">tailwind css</button>
                                         <button className="skill-btn">React</button>
                                         <button className="skill-btn">Axios</button>
@@ -131,7 +131,7 @@ const Projects = () => {
                                         
 
                                     </div>
-                                    <div className="pt-5 flex gap-5 cursor-pointer items-center">
+                                    <div className=" flex gap-5 cursor-pointer items-center">
                                         <Link href="https://get-linked-one.vercel.app/">
                                             <ArrowTopRightOnSquareIcon className="h-6 w-6 text-[#CCD6F6]"/>
                                         </Link>
@@ -151,14 +151,14 @@ const Projects = () => {
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
                                 <h4 className="text-lg text-orange-500">featured project</h4>
                                 <h2 className="title text-2xl py-5">Portfolio Website</h2>
-                                <div className="w-full  right-10 text-[#CCD6F6]  rounded-2xl ">
+                                <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
                                         This presents some of te project I have worked on. Users can see my projects, know more about me and contact me.
                                     </p>
                                     <p>
-                                        this project features a summary of my work and and a good user exprience as we they reach out to me
+                                        This project features a summary of my work and and a good user exprience as they reach out to me
                                     </p>
-                                    <div className="pt-5 flex flex-wrap gap-3 cursor-progress">
+                                    <div className=" flex flex-wrap gap-3 cursor-progress">
                                         <button className="skill-btn">tailwind css</button>
                                         <button className="skill-btn">React</button>
                                         <button className="skill-btn">Next Js</button>
@@ -166,7 +166,7 @@ const Projects = () => {
                                         
 
                                     </div>
-                                    <div className="pt-5 flex gap-5 cursor-pointer items-center">
+                                    <div className=" flex gap-5 cursor-pointer items-center">
                                         <Link href="https://ozavcodez-porfolio.vercel.app/">
                                             <ArrowTopRightOnSquareIcon className="h-6 w-6 text-[#CCD6F6]"/>
                                         </Link>

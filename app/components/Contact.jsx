@@ -1,6 +1,6 @@
 "use client"
 import { useForm } from "react-hook-form"
-
+import {motion} from "framer-motion"
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid';
 
 const Contact = () => {
@@ -19,7 +19,13 @@ const Contact = () => {
     <>
     <div className="h-screen flex relative flex-col text-center md:text-left lg:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
         <div className="my-20 lg:my-0">
-        <h3 className="bg-clip-text text-transparent bg-img text-2xl md:text-5xl md:text-left text-center justify-center tracking-[20px] py-10"> Contact</h3>
+        <motion.h3 
+            initial={{opacity:0}}
+            whileInView={{opacity:1}}
+            transition={{duration: 1.5}}
+            
+            className="bg-clip-text text-transparent bg-img text-2xl md:text-5xl md:text-left text-center justify-center tracking-[20px] py-10"> Contact
+        </motion.h3>
         <div className="flex flex-col space-y-10">
             {/* <h4 className="text-4xl font-semibold text-center">
                 I have got just what you need.
