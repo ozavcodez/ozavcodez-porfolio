@@ -43,7 +43,7 @@ const Contact = () => {
         </div>
         </div>
         
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto mt-5 md:mt-0'>
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto my-5 md:my-0'>
                 <div className="md:flex space-y-2 md:space-y-0 md:space-x-2">
                     <input className='contactInput' placeholder='name' type="text" {...register("name")} />
                     <input className='contactInput'placeholder='email' type="email" {...register("email")}  />
