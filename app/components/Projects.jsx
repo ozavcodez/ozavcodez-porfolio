@@ -9,7 +9,7 @@ import { SocialIcon } from 'react-social-icons'
 const Projects = () => {
     return ( 
         <>
-            <section className=" w-[90] md:w-[80%] mx-auto mt-20 md:mt-40 ">
+            <section className=" w-[90] lg:w-[80%] mx-auto mt-20 md:mt-40 ">
                 <div>
                     <motion.h4 
                         initial={{opacity:0}}
