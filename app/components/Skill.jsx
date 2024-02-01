@@ -15,7 +15,7 @@ const Skills = () => {
             >
                 <h4 className="bg-clip-text text-transparent bg-img text-2xl md:text-5xl md:text-left text-center justify-center  uppercase tracking-[20px]  ">Skills</h4>
                 <p className=" justify-center   tracking-[3px] uppercase text-xl md:text-2xl "> Here is a list of my skill </p>
-                <div className="grid grid-cols-3 md:grid-cols-5 gap-5 justify-center mt-20 mx-auto w-[70%] ">
+                <div className="grid grid-cols-3 md:grid-cols-5 gap-5 justify-center mt-20 mx-auto lg:w-[70%] ">
                 <motion.div
                     className=" group relative cursor-pointer"
                     initial={{x:-100, opacity:0}}
