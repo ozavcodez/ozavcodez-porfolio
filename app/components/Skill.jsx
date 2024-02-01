@@ -26,6 +26,7 @@ const Skills = () => {
                     src="/img/html.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -39,6 +40,7 @@ const Skills = () => {
                     src="/img/css.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -52,6 +54,7 @@ const Skills = () => {
                     src="/img/tailwind.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -65,6 +68,7 @@ const Skills = () => {
                     src="/img/javascript.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -78,6 +82,7 @@ const Skills = () => {
                     src="/img/vue.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -91,6 +96,7 @@ const Skills = () => {
                     src="/img/reactjs.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -104,6 +110,7 @@ const Skills = () => {
                     src="/img/sass.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -117,6 +124,7 @@ const Skills = () => {
                     src="/img/mongoDB.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>
@@ -130,6 +138,7 @@ const Skills = () => {
                     src="/img/nodeJS.png"
                     width={100}
                     height={100}
+                    alt=""
                     className="rounded w-40 h-40 border border-gray-500 object-cover  filter group-hover:grayscale transition duration-300 ease-in-out"
                     />
                 </motion.div>

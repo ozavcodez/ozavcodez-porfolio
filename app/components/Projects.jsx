@@ -27,6 +27,7 @@ const Projects = () => {
                             src="/img/gpon-edu.jpg"
                             width={400}
                             height={430}
+                            alt=""
                         />
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
@@ -99,6 +100,7 @@ const Projects = () => {
                             src="/img/gpon-web.jpg"
                             width={400}
                             height={430}
+                            alt=""
                         />
                         
                     </div>
@@ -108,6 +110,7 @@ const Projects = () => {
                             src="/img/get-linked.jpg"
                             width={400}
                             height={430}
+                            alt=""
                         />
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
@@ -182,6 +185,7 @@ const Projects = () => {
                             src="/img/portfolio.jpg"
                             width={400}
                             height={430}
+                            alt=""
                         />
                         
                     </div>
