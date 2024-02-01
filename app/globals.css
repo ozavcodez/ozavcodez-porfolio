@@ -1,8 +1,10 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&f[]=montserrat@500,1,900,700,701,801,200,401,301,400,601,100,101,2,201,800,300,600,501&display=swap"); 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,10 +26,49 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .title{
+    font-family: 'Clash Display', sans-serif; 
+    @apply font-bold text-white lg:leading-10 pb-3  text-xl md:text-3xl
+  }
+  .nav-bar{
+    background: #1A0B2E;
+    box-shadow: 0px 6px 22px -3px rgba(0, 0, 0, 0.10);
+  }
+  .bg-img{
+    background-image:linear-gradient(114.98deg,#ff7363 14.74%,rgba(214,136,64,.93) 32.7%,rgba(245,114,216,.92) 90.8%)
+  }
+  .btn:hover {
+    background: linear-gradient(114.98deg,#ff7363 14.74%,rgba(214,136,64,.93) 32.7%,rgba(245,114,216,.92) 90.8%);
+    color: #fff;
+    border-radius: 20px;
+    /* border-image-slice: 1; */
+    border-image-source: linear-gradient(114.98deg,#ff7363 14.74%,rgba(214,136,64,.93) 32.7%,rgba(245,114,216,.92) 90.8%);
+  }
+  .btn {
+    border: 2px double transparent;
+    color: #fff;
+    background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, #ff7363, #ef7d13f0,  #F572D8E7);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+  .bg-radial{
+    background-image: radial-gradient(#693B93, #6EBFF439, #4690D400);
+  }
+  .skill-btn{
+    @apply uppercase border rounded-lg px-2 py-1 text-sm
+  }
+  .contactInput{
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all
+     focus:border-[#f7a80a]/40  focus:text-[#f7a80a]/40 hover:border-[#f7a80a]/40
+  }
 }
+
+
