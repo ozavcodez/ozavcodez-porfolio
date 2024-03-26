@@ -66,7 +66,7 @@ const Projects = () => {
                         className="  flex flex-col md:flex-row gap-10 justify-center items-center " >
                         <Image
                             className=" bg-orange-400 p-5"
-                            src="/img/gpon-edu.jpg"
+                            src="/gpon-edu.jpg"
                             width={400}
                             height={430}
                             alt="Project I have worked on"
@@ -145,7 +145,7 @@ const Projects = () => {
                         </div>
                         <Image
                             className="bg-orange-400 p-5 "
-                            src="/img/gpon-web.jpg"
+                            src="/gpon-web.jpg"
                             width={400}
                             height={430}
                             alt=""
@@ -161,7 +161,7 @@ const Projects = () => {
                         className=" flex flex-col md:flex-row gap-10 justify-center items-center " >
                         <Image
                             className=" bg-orange-400 p-5"
-                            src="/img/get-linked.jpg"
+                            src="/get-linked.jpg"
                             width={400}
                             height={430}
                             alt=""
@@ -242,7 +242,7 @@ const Projects = () => {
                         </div>
                         <Image
                             className=" bg-orange-400 p-5 "
-                            src="/img/portfolio.jpg"
+                            src="/portfolio.jpg"
                             width={400}
                             height={430}
                             alt=""
