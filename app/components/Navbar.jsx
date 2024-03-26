@@ -8,20 +8,22 @@ const Navbar = () => {
     const Hover =({isActive}) => (isActive ? 'bg-clip-text hover:text-transparent hover:bg-gradient-to-r from-pinkpur via-main to-blues' : hover)
     
     return ( 
-        <>
         <header className="   sticky top-0 z-20 ">
-            <div className=" max-w-7xl mx-auto md:grid grid-cols-10 md:grid-cols-12 justify-between md:justify-center p-2 nav-bar rounded-2xl items-center">
+            <div className=" max-w-7xl mx-auto md:grid grid-cols-10 md:grid-cols-12 justify-between md:justify-center p-2 nav-bar rounded-2xl items-center bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]">
                 <motion.div 
                     className="col-span-5"
                     initial={{
                         opacity:0,
-                        x:-500,
-                        scale:0.5
+                        x:"-50%",
+                        y:-100,
+                        // scale:0.5
                     }}
                     animate={{
                         opacity:1,
-                        x:0,
-                        scale:1 
+                        x:"0",
+                        y:0,
+
+                        // scale:1 
                     }}
                     transition={{duration:0.5}}
                 >
@@ -70,9 +72,7 @@ const Navbar = () => {
             </div>
            
         </header>
-            
-        
-        </>
+
      );
 }
  

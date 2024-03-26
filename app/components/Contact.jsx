@@ -17,8 +17,8 @@ const Contact = () => {
     
     return ( 
     <>
-    <div className="h-screen flex relative flex-col text-center md:text-left lg:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-        <div className="my-20 lg:my-0">
+    <div className=" flex relative flex-col text-center md:text-left lg:flex-row max-w-7xl p-10 justify-evenly mx-auto items-center ">
+        <div className="my-10 lg:my-0">
         <motion.h3 
             initial={{opacity:0}}
             whileInView={{opacity:1}}

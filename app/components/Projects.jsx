@@ -1,33 +1,75 @@
 "use client"
+import React, {useRef} from "react";
 import Image from "next/image";
-import {motion} from "framer-motion";
+import {useScroll, motion, useTransform} from "framer-motion";
 import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/solid';
 import Link from "next/link";
 import { SocialIcon } from 'react-social-icons'
 
 
 const Projects = () => {
+    const ref = useRef(null);
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
+
+    const {scrollYProgress} = useScroll({
+        target:ref,
+        offset: ["0 1", "1.33 1"],
+    });
+    const { scrollYProgress: scrollYProgress1 } = useScroll({
+        target: ref1,
+        offset: ["0 0", "1 1"], // Adjust the offset as needed
+    });
+
+    const { scrollYProgress: scrollYProgress2 } = useScroll({
+        target: ref2,
+        offset: ["0 0", "1 1"], // Adjust the offset as needed
+    });
+    const { scrollYProgress: scrollYProgress3 } = useScroll({
+        target: ref3,
+        offset: ["0 0", "1 1"], // Adjust the offset as needed
+    });
+
+    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.8, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0,1], [0.6, 1]);
+    const scaleProgress1 = useTransform(scrollYProgress1, [0, 1], [0.8, 1]);
+    const opacityProgress1 = useTransform(scrollYProgress1, [0, 1], [0.6, 1 ]);
+
+    const scaleProgress2 = useTransform(scrollYProgress2, [0, 1], [0.8, 1]);
+    const opacityProgress2 = useTransform(scrollYProgress2, [0, 1], [0.6, 1]);
+    const scaleProgress3= useTransform(scrollYProgress3, [0, 1], [0.8, 1]);
+    const opacityProgress3 = useTransform(scrollYProgress3, [0, 1], [0.6, 1]);
+
     return ( 
-        <>
-            <section className=" w-[90] lg:w-[80%] mx-auto mt-20 md:mt-40 ">
-                <div>
-                    <motion.h4 
-                        initial={{opacity:0}}
-                        whileInView={{opacity:1}}
-                        transition={{duration: 1.5}}
-                        
-                        className="bg-clip-text text-transparent bg-img text-2xl md:text-5xl md:text-left text-center justify-center  uppercase tracking-[20px] ">
-                        Projects
-                    </motion.h4>
-                </div>
-                <div className="space-y-20 mt-10">
-                    <div className="relative flex flex-col md:flex-row gap-10 justify-center items-center " >
+        
+        <section className=" w-[90%] lg:w-[80%] mx-auto mt-32 overflow-hidden">
+            <motion.h4 
+                initial={{opacity:0}}
+                whileInView={{opacity:1}}
+                transition={{duration: 1.5}}
+                
+                className="bg-clip-text text-transparent bg-img text-2xl md:text-5xl md:text-left text-center justify-center  uppercase tracking-[20px] ">
+               my Projects
+            </motion.h4>
+            <div 
+                
+               
+            >
+                <div className="space-y-2">
+                    <motion.div 
+                        ref={ref} 
+                        style={{
+                            scale:scaleProgress,
+                            opacity: opacityProgress
+                        }}
+                        className="  flex flex-col md:flex-row gap-10 justify-center items-center " >
                         <Image
                             className=" bg-orange-400 p-5"
                             src="/img/gpon-edu.jpg"
                             width={400}
                             height={430}
-                            alt=""
+                            alt="Project I have worked on"
                         />
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
@@ -40,7 +82,7 @@ const Projects = () => {
                                     <p>
                                         The key functionalities are to autheticate user, see list  of courses registered for, and issue certificate with a unique id to user
                                     </p>
-                                    <div className=" flex gap-3 cursor-progress">
+                                    <div className=" flex flex-wrap gap-3 cursor-progress">
                                         <button className="skill-btn">tailwind css</button>
                                         <button className="skill-btn">laravel</button>
                                         <button className="skill-btn">javascript</button>
@@ -61,8 +103,14 @@ const Projects = () => {
                             </div>
                             
                         </div>
-                    </div>
-                    <div className="relative flex flex-col-reverse md:flex-row gap-10 justify-center items-center" >
+                    </motion.div>
+                    <motion.div 
+                        ref={ref1} 
+                        style={{
+                            scale:scaleProgress1,
+                            opacity: opacityProgress1
+                        }}
+                        className="  flex flex-col-reverse md:flex-row gap-10 justify-center items-center" >
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
                                 <h4 className="text-lg text-orange-400">featured project</h4>
@@ -74,7 +122,7 @@ const Projects = () => {
                                     <p>
                                         Users can easily get to know the current state of the organization, Users can comment on the blogpost and register for the organization newsletter
                                     </p>
-                                    <div className=" flex gap-3 cursor-progress">
+                                    <div className=" flex flex-wrap gap-3 cursor-progress">
                                         <button className="skill-btn">tailwind css</button>
                                         <button className="skill-btn">laravel</button>
                                         <button className="skill-btn">javascript</button>
@@ -103,8 +151,14 @@ const Projects = () => {
                             alt=""
                         />
                         
-                    </div>
-                    <div className="relative flex flex-col md:flex-row gap-10 justify-center items-center " >
+                    </motion.div>
+                    <motion.div 
+                        ref={ref2} 
+                        style={{
+                            scale:scaleProgress2,
+                            opacity: opacityProgress2
+                        }}
+                        className=" flex flex-col md:flex-row gap-10 justify-center items-center " >
                         <Image
                             className=" bg-orange-400 p-5"
                             src="/img/get-linked.jpg"
@@ -118,12 +172,12 @@ const Projects = () => {
                                 <h2 className="title text-2xl py-5">Hackathon Project</h2>
                                 <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
-                                        An hackathon project designed for users who want to peartake in the next hackathon. It a user friendly website for registering users interested in the next hackathond and passing information about the challenge
+                                        An hackathon project designed for users who want to peartake in the next hackathon. It a user friendly website for registering users interested in the next hackathon and passing information about the challenge
                                     </p>
                                     <p>
                                         The key functionalities are to register users, and to give more information about the challenge 
                                     </p>
-                                    <div className=" flex gap-3 cursor-progress">
+                                    <div className=" flex flex-wrap gap-3 cursor-progress">
                                         <button className="skill-btn">tailwind css</button>
                                         <button className="skill-btn">React</button>
                                         <button className="skill-btn">Axios</button>
@@ -145,15 +199,21 @@ const Projects = () => {
                             </div>
                             
                         </div>
-                    </div>
-                    <div className="relative flex flex-col-reverse md:flex-row gap-10 justify-center items-center" >
+                    </motion.div>
+                    <motion.div 
+                        ref={ref3} 
+                        style={{
+                            scale:scaleProgress3,
+                            opacity: opacityProgress3
+                        }}
+                        className=" flex flex-col-reverse md:flex-row gap-10 justify-center items-center" >
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
                                 <h4 className="text-lg text-orange-500">personal project</h4>
                                 <h2 className="title text-2xl py-5">Portfolio Website</h2>
                                 <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
-                                        This presents some of te project I have worked on. Users can see my projects, know more about me and contact me.
+                                        This presents some of the projects I have worked on. Users can see my projects, know more about me and contact me.
                                     </p>
                                     <p>
                                         This project features a summary of my work and and a good user exprience as they reach out to me
@@ -188,10 +248,12 @@ const Projects = () => {
                             alt=""
                         />
                         
-                    </div>
+                    </motion.div>
                 </div>
-            </section>
-        </>
+                
+            </div>
+        </section>
+       
      );
 }
  

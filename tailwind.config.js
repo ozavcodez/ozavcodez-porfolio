@@ -22,6 +22,10 @@ module.exports = {
         pinkpur: '#FE34B9',
         blues: '#903AFF'
       },
+      screens: {
+        'xs': '375px',
+        // ...defaultTheme.screens,
+      }
     },
   },
   plugins: [],

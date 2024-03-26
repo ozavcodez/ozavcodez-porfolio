@@ -1,7 +1,8 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import JoyImg from "@/public/joy-5.jpg"
 
 const hero = () => {
     const [text] = useTypewriter({
@@ -11,7 +12,11 @@ const hero = () => {
 
     });
     return ( 
-        <section className=" md:flex w-[90%] mx-auto justify-between gap-10 mt-20 ">
+        <motion.section 
+            className=" md:flex w-[90%] mx-auto justify-between gap-10 mt-20 "
+            initial={{opacity:0, y:100}} 
+            animate={{opacity:1, y:0}}   
+        >
             <div className=" relative">
                 <div className="leading-loose space-y-5 ">
                     <h1 >Hi I'm</h1>
@@ -22,24 +27,24 @@ const hero = () => {
                     </h1>
                     <p className="text-justify max-w-prose py-5"> 
                 
-                    A software developer functioning in the industry for 2years+. I am passionate about learning new technologies and solving problems. I have a Good knowledge of software design, architecture, and principles, writing efficient and optimized programs in Languages such as  Javascript, Vue Js, React, and CSS.
+                    A software developer functioning in the industry for 2years. I am passionate about learning new technologies and solving problems. I have a Good knowledge of software design, architecture, and principles, writing efficient and optimized programs in Languages such as  Javascript, Vue Js, React, and CSS.
                     </p>
-                    <Link href='/ozav-cv.pdf' className="btn py-3"> Download Resume</Link>
+                    <a href='/ozav-cv.pdf' className="btn py-3 my-3" download={true}> Download Resume</a>
                 </div>
             </div>
             <div>
-                <div className="bg-radial ">
+                <div className="md:bg-radial ">
                     <Image
-                        className="  py-10 md:origin-bottom md:-rotate-12 delay-300 transition-transform hover:rotate-12 ease-linear"
-                        src="/img/joy-5.jpg"
-                        alt=''
-                        width={300}
-                        height={450}
+                        className="  py-10  h-[38rem] w-[25rem] hover:-translate-x-3 hover:translate-y-3 hover:-rotate-2 transition object-contain"
+                        src={JoyImg}
+                        alt='Ozavize'
+
+                        
                     />
                 </div>
             </div>
 
-        </section>
+        </motion.section>
      );
 }
  
