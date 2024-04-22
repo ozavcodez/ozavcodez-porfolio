@@ -25,11 +25,11 @@ const About = () => {
                 I am also familiar with TypeScript . I am always looking to learn new technologies. I am currnetly looking for a {" "}
                 <span className="font-medium">full-time position</span> as a software developer
             </p>
-            <p>
+            {/* <p>
                 <span className="italic">When I'm not coding</span>, I enjoy playing video games, watching movies, and playing wih my dog. I also enjoy {" "}
                 <span className="font-medium">learning new things</span>. I am currently learning about {" "}
                 <span>history and philossophy</span>. I'm also learning how to play the guiter.
-            </p>
+            </p> */}
         </motion.section>
      );
 }
