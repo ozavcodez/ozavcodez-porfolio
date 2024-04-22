@@ -1,9 +1,8 @@
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import Skills from "@/app/components/Skill";
-import Projects from "@/app/components/projects";
+import Projects from "@/app/components/Projects";
 import Contact from "@/app/components/Contact";
-import ThemeSwitch from "./components/theme-switch";
 import About from "./components/about";
 import SectionDivider from "./components/section-divider";
 
@@ -17,7 +16,6 @@ export default function Home() {
       <Projects/>
       <Skills/>
       <Contact/>
-     {/* <ThemeSwitch/> */}
     </main>
   );
 }
