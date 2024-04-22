@@ -3,38 +3,61 @@ import React from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import { skillsData } from "@/lib/data";
+import SectionHeading from "./section-heading";
+import { useSectionInView } from "@/lib/hooks";
+
 
 const Skills = () => {
+    const {ref} = useSectionInView("Skills");
+
+    const fadeInAnimationVariants ={
+        initial:{
+            opacity:0,
+            y:100,
+        },
+        animate: (index) => ({
+            opacity:1,
+            y:0,
+            transition:{
+               delay:0.05 * index,
+            }
+        }),
+    }
     
     return ( 
         <>
-        <section className="min-h-screen relative flex  flex-col text-center md:text-left justify-center w-[90%] lg:w-[80%] mx-auto mt-10">
+        <section 
+            className="mb-28  max-w-[53rem] scroll-mt-28 text-center sm:mb-40" 
+            ref={ref}
+            id="skills" 
+        >
             <motion.div
                 initial={{opacity:0}}
                 whileInView={{opacity:1}}
                 transition={{duration: 1.5}}
                 
             >
-                <h4 className="bg-clip-text text-transparent bg-img text-2xl md:text-5xl md:text-left text-center justify-center  uppercase tracking-[20px]  ">Skills</h4>
-                <p className=" justify-center   tracking-[3px] uppercase text-xl md:text-2xl "> Here is a list of my skill </p>
-                <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-5 gap-5 justify-center mt-20 mx-auto lg:w-[70%] ">
-                {skillsData.map((skill)=>(
-                    <motion.div
-                    className=" group relative cursor-pointer"
-                    initial={{x:-100, opacity:0}}
-                    transition={{duration:1}}
-                    whileInView={{opacity:1, x:0}}
-                >
-                    <Image
-                    src={skill.src}
-                    alt={skill.src}
-                    className="rounded-lg h-24 bg-orange-400 border border-gray-500 p-2 object-fit  filter group-hover:grayscale transition duration-300 ease-in-out"
-                    />
-                </motion.div>
-                ))}
+            <SectionHeading> MY Skills</SectionHeading>
                 
-                
-            </div>
+                <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+                {
+                    skillsData.map((skill, index) =>(
+                        <motion.li 
+                          className=" bg-white border border-black/[0.1] rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/70" 
+                          key={index}
+                          variants={fadeInAnimationVariants}
+                          initial= "initial"
+                          whileInView="animate"
+                          viewport={{
+                            once:true,
+                          }}
+                          custom={index}
+                        >
+                            {skill}
+                        </motion.li>
+                    ))
+                }
+            </ul>
             </motion.div>
             
         </section>
