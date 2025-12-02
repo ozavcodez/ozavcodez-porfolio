@@ -8,6 +8,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { Typewriter } from 'react-simple-typewriter'
 
 const hero = () => {
     const {ref} = useSectionInView("Home", 0.5)
@@ -17,12 +18,12 @@ const hero = () => {
         <motion.section
         ref={ref} 
         id="home"
-        className=" pt-28 sm:pt-36  mb-28 max-w-[50rem] mx-auto text-center sm:mb-0 scroll-mt-[100rem]"
+        className="pt-28 sm:pt-36 mb-40 max-w-[50rem] mx-auto text-center sm:mb-0 scroll-mt-[100rem]"
             initial={{opacity:0, y:100}} 
             animate={{opacity:1, y:0}}   
         >
             <div className="flex items-center justify-center">
-                <div className="relative -z-10">
+                <div className="relative">
                     <motion.div
                         initial= {{opacity: 0, scale:0}}
                         animate = {{opacity:1, scale:1}}
@@ -39,10 +40,10 @@ const hero = () => {
                             height="192"
                             quality="95"
                             priority={true}
-                            className="rounded-full h-24 w-24 object-cover shadow-xl border-[0.35rem] border-white "
+                            className="rounded-full h-24 w-24 object-cover shadow-xl border-[0.35rem] border-white sm:h-28 sm:w-28"
                         />
                         <motion.span 
-                            className="text-4xl absolute bottom-0 right-0"
+                            className="text-3xl sm:text-4xl absolute bottom-0 right-0"
                             initial={{opacity:0, scale:0}}
                             animate={{opacity:1, scale:1}}
                             transition={{
@@ -63,13 +64,23 @@ const hero = () => {
                 animate={{opacity:1, y:0}}       
             >
                 <span className="font-bold">Hello, I'm Ozavize</span> I'm a {" "} 
-                <span className="font-bold">full-stack developer</span> with{" "}
-                <span className="font-bold">2 years</span> of experience. I enjoy building 
-                <span className="italic">sites & apps</span> My focus is{" "}
-                <span className="underline">React (Next.js)</span>
+                <span className="font-bold inline-block min-h-[1.5em] align-bottom">
+                    <Typewriter
+                        words={['Full-Stack Developer', 'React Specialist', 'Next.js Expert']}
+                        loop={0}
+                        cursor
+                        cursorStyle='_'
+                        typeSpeed={100}
+                        deleteSpeed={70}
+                        delaySpeed={2000}
+                    />
+                </span> with{" "}
+                <span className="font-bold">more than 3 years</span> of experience. I enjoy building {" "}
+                <span className="italic">modern web applications</span>. My focus is {" "}
+                <span className="underline">React (Next.js)</span>.
             </motion.h1>
             <motion.div 
-             className="flex flex-col sm:flex-row items-center justify-center gap-2 text-lg font-medium px-4"
+             className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2 text-lg font-medium px-4"
              initial={{opacity:0, y:100}} 
              animate={{opacity:1, y:0}}
              transition={{
@@ -77,7 +88,7 @@ const hero = () => {
              }}   
             >
                 <Link href="#contact"
-                className="group bg-gray-900 text-white px-7 py-3 flex items-center  gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+                className="group bg-gray-900 text-white px-5 py-3 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
                 onClick={()=>
                     {
                      setActiveSection("Contact");
@@ -86,22 +97,24 @@ const hero = () => {
 
                  }
                 >
-                    contact me here <BsArrowRight  className="opacity-70 group-hover:translate-x-1 transition"/>
+                    Contact me <BsArrowRight  className="opacity-70 group-hover:translate-x-1 transition"/>
                 </Link>
 
-                <a href="/ozav-cv.pdf" className=" group bg-white  px-7 py-3 flex items-center  gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" download> 
+                <a href="/ozav-cv.pdf" className="group bg-white px-5 py-3 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" download> 
                     Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/> 
                 </a>
-                <a href="https://www.linkedin.com/in/ozavize-akande" className="bg-white p-4 text-gray-700 flex items-center  gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60">
-                    <BsLinkedin />
-                </a>
-                <a href="https://github.com/ozavcodez" className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center  gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60">
-                    <FaGithubSquare />
-                </a>
+                <div className="flex gap-2">
+                    <a href="https://www.linkedin.com/in/ozavize-akande" className="bg-white p-3 sm:p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60">
+                        <BsLinkedin />
+                    </a>
+                    <a href="https://github.com/ozavcodez" className="bg-white p-3 sm:p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60">
+                        <FaGithubSquare />
+                    </a>
+                </div>
             </motion.div>
 
         </motion.section>
      );
 }
- 
+
 export default hero;

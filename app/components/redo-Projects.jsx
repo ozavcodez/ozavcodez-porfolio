@@ -70,7 +70,7 @@ const ProjectsToWorkOn = () => {
                         <div className=" ">
                             <div className="bg-[#1A0B2E] p-2 md:p-10 max-w-[600px]">
                                 <h4 className="text-lg text-orange-400">featured project</h4>
-                                <h2 className="title text-2xl py-5">E-Learning Portal</h2>
+                                <h2 className="title text-2xl py-5">Coahlite</h2>
                                 <div className="w-full space-y-5 right-10 text-[#CCD6F6]  rounded-2xl ">
                                     <p>
                                         This is an e-learning platform. Users have several options of courses they can explore. Once a user logs in, he gets access to the course he registered for. The user learning phase is tracked and once he is done with a course, he gets a certificate.

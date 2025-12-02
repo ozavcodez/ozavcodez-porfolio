@@ -1,12 +1,10 @@
 import { inter } from  '@/app/ui/fonts';
 import "./globals.css";
 import ThemeSwitch from './components/theme-switch';
-import ThemeContextProvider from "@/context/theme-context";
+import { ThemeContextProvider } from "@/context/theme-context";
 import Header from './components/header';
-import ActiveSectionContextProvider from '@/context/active-section-context';
+import { ActiveSectionContextProvider } from '@/context/active-section-context';
 import Footer from './components/Footer';
-
-
 
 export const metadata = {
   title: "My Portfolio",

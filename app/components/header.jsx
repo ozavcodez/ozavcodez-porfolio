@@ -9,7 +9,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
     const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
-    // const [activeSection, setActiveSection] = useState("Projects")
+    
     return (
         <header>
             <motion.div className="fixed top-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-full 

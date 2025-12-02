@@ -1,16 +1,20 @@
-"use client"
-import {motion} from "framer-motion";
+"use client";
 
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const SectionDivider = () => {
-    return ( 
-        <motion.div className="bg-gray-200 my-24 h-16 w-1 rounded-full hidden sm:block dark:bg-opacity-20"
-        initial={{opacity:0, y:100}} 
-        animate={{opacity:1, y:0}} 
-        transition={{delay:0.125}}
-        >
-        </motion.div>
-     );
-}
- 
+  return (
+    <motion.div 
+      className="my-10 flex justify-center"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+      <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full"></div>
+    </motion.div>
+  );
+};
+
 export default SectionDivider;

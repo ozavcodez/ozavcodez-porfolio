@@ -58,6 +58,7 @@ body {
     background-clip: padding-box, border-box;
     border-radius: 20px;
     padding: 10px 20px;
+    transition: all 0.3s ease;
   }
   .bg-radial{
     background-image: radial-gradient(#693B93, #6EBFF439, #4690D400);
@@ -68,6 +69,30 @@ body {
   .contactInput{
     @apply outline-none w-full bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all
      focus:border-[#f7a80a]/40  focus:text-[#f7a80a]/40 hover:border-[#f7a80a]/40
+  }
+  
+  /* Project card enhancements */
+  .project-card {
+    @apply transition-all duration-300 ease-in-out transform;
+  }
+  
+  .project-card:hover {
+    @apply -translate-y-1;
+  }
+  
+  /* Section heading enhancement */
+  .section-heading {
+    @apply text-3xl font-bold capitalize mb-12 text-center relative;
+  }
+  
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-[-12px] left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600 rounded-full;
+  }
+  
+  /* Dark mode adjustments */
+  .dark .section-heading::after {
+    @apply bg-blue-400;
   }
 }
 
